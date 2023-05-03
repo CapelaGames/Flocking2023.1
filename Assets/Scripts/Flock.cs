@@ -45,7 +45,7 @@ public class Flock : MonoBehaviour
             Vector2 move = behaviour.CalculateMove(agent,
                                                     context,
                                                     this);
-
+            move = move.normalized * 2f;
             agent.Move(move);
         }
     }
