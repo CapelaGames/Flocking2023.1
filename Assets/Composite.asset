@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviours:
   - behaviour: {fileID: 11400000, guid: 01477cc7073cb7d46a30950aa6ab1829, type: 2}
-    weights: 5
-  - behaviour: {fileID: 11400000, guid: da5c4aaf04796494b910f091fad0cc43, type: 2}
-    weights: 20
-  - behaviour: {fileID: 11400000, guid: 2e9b15612505cf6459c0fc518acffdd9, type: 2}
     weights: 1
-  - behaviour: {fileID: 11400000, guid: b1c6158e048652f4c8c914470839df85, type: 2}
+  - behaviour: {fileID: 11400000, guid: b210369901649b34f9d44b30e06e3a40, type: 2}
     weights: 1
+  - behaviour: {fileID: 11400000, guid: 2ee25220fe1592740b004d073caeea3f, type: 2}
+    weights: 3

@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,26 +15,24 @@ public class CompositeBehaviour : Behaviour
 
     public BehaviourGroup[] behaviours;
 
-
     public override Vector2 CalculateMove(FlockAgent agent,
-                                   List<Transform> context,
-                                   Flock flock)
+                                    List<Transform> context,
+                                    Flock flock)
     {
         Vector2 move = Vector2.zero;
 
-        foreach(BehaviourGroup behaviour in behaviours)
+        foreach (BehaviourGroup behaviour in behaviours)
         {
-            Vector2 partialMove = behaviour.behaviour.CalculateMove(agent, context, flock);
+            Vector2 patrialMove = behaviour.behaviour.CalculateMove(agent, context, flock);
 
-            if (partialMove == Vector2.zero) continue;
+            if (patrialMove == Vector2.zero) continue;
 
-            partialMove.Normalize();
-            partialMove *= behaviour.weights;
+            patrialMove.Normalize();
+            patrialMove *= behaviour.weights;
 
-            move += partialMove;
+            move += patrialMove;
         }
 
-        return move.normalized;
-
+        return move;
     }
 }
