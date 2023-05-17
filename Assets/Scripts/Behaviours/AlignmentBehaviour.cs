@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Flock/Behaviour/Alignment")]
+[CreateAssetMenu(menuName = "Flock/Behaviour/Alignment", fileName = "Alignment")]
 public class AlignmentBehaviour : Behaviour
 {
     public override Vector2 CalculateMove(FlockAgent agent,
@@ -24,7 +24,7 @@ public class AlignmentBehaviour : Behaviour
 
         if (count != 0) 
         { 
-            alignmentMove /= count;
+            alignmentMove = alignmentMove / count;
         }
 
         return alignmentMove;

@@ -15,10 +15,16 @@ public class Flock : MonoBehaviour
 
     [Range(1f, 10f)]
     public float contextRadius = 1.5f;
+    [Range(0f, 1f)]
+    public float avoidanceRadius = 0.75f;
+
+    public float squareAvoidanceRadius;
 
     void Start()
     {
-        for(int i = 0; i < startingCount ; i++)
+        squareAvoidanceRadius = avoidanceRadius * avoidanceRadius;
+
+        for (int i = 0; i < startingCount ; i++)
         {
             Vector2 randomLocation = Random.insideUnitCircle
                 * startingCount
