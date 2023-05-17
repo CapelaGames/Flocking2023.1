@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
+/*    [Header("HEADER")]
+    public float ahhhh;
+    [Space(500)]
+    public float ahhhh1;
+    [Range(0f, 1f)]
+    public float ahhhh2;
+*/
     public FlockAgent agentPrefab;
     //Like an Array, but we can change the size of it
     public List<FlockAgent> agents;
@@ -16,9 +23,14 @@ public class Flock : MonoBehaviour
 
     [Range(1f,10f)]
     public float contextRadius = 1.5f;
+    [Range(0f, 1f)]
+    public float avoidanceRadius = 0.75f;
+
+    public float squareAvoidanceRadius;
 
     void Start()
     {
+        squareAvoidanceRadius = avoidanceRadius * avoidanceRadius;
         for(int i = 0; i < startingCount; i++)
         {
             Vector2 randomLocation = Random.insideUnitCircle
