@@ -28,6 +28,8 @@ public class Flock : MonoBehaviour
 
     public float squareAvoidanceRadius;
 
+    public float speed = 1f;
+
     void Start()
     {
         squareAvoidanceRadius = avoidanceRadius * avoidanceRadius;
@@ -62,7 +64,7 @@ public class Flock : MonoBehaviour
                                                     context,
                                                     this);
 
-            agent.Move(move);
+            agent.Move(move * speed);
         }
     }
 
